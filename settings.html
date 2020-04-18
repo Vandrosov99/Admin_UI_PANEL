@@ -69,7 +69,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h1>
-                        Post {number}
+                        <i class="fas fa-cog"></i> Settings
                     </h1>
                 </div>
             </div>
@@ -78,22 +78,18 @@
 
 
     <!-- Actions -->
+    <!-- ACTIONS -->
     <section id="actions" class="py-4 mb-4 bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <a href="index.html" class="btn btn-light w-50">
-                        <i class="fas fa-arrow-left"></i> back to dashboard
+                <div class="col-md-3">
+                    <a href="index.html" class="btn btn-light btn-block">
+                        <i class="fas fa-arrow-left"></i> Back To Dashboard
                     </a>
                 </div>
                 <div class="col-md-3">
                     <a href="index.html" class="btn btn-success btn-block">
-                        <i class="fas fa-check"></i> Save changes
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="index.html" class="btn btn-danger btn-block">
-                        <i class="fas fa-trash"></i> Delete posts
+                        <i class="fas fa-check"></i> Save Changes
                     </a>
                 </div>
             </div>
@@ -102,44 +98,41 @@
 
 
 
-    <!-- details -->
-    <section id="details">
+
+    <!-- settings -->
+    <section id="settings">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Edit Post</h4>
+                            <h4>Edit Settings</h4>
                         </div>
                         <div class="card-body">
                             <form>
-                                <div class="form-group">
-                                    <label for="title">Title</label>
-                                    <input type="text" class="form-control" value="Post one">
-                                </div>
-                                <div class="form-group">
-                                    <label for="Category">CategorY</label>
-                                    <select class="form-control">
-                                        <option value="" selected>Web develpment</option>
-                                        <option value="">Tag gadgets</option>
-                                        <option value="">Take business</option>
-                                        <option value="">Kek</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="image">Upload image</label>
-                                    <div class="custom-file">
-                                        <input type="file" id="image" class="custom-file-input">
-                                        <label for="image" class="custom-file-label">Choose file</label>
+                                <fieldset class="form-group">
+                                    <legend>Allow User Registration</legend>
+                                    <div class="form-check">
+                                        <div class="form-check-label">
+                                            <input type="radio" class="form-check-input" value="yes" checked> YES
+                                        </div>
                                     </div>
-                                    <small class="form-text text-muted">Max size 3mb</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="body">Body</label>
-                                    <textarea name="editor1" class="form-control">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quaerat. Incidunt non atque magni ducimus. Iusto dolore sequi et voluptates.
-                                    </textarea>
-                                </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" value="No"> No
+                                    </div>
+                                </fieldset>
+                                <fieldset class="form-group">
+                                    <legend>Homepage format</legend>
+                                    <div class="form-check">
+                                        <div class="form-check-label">
+                                            <input type="radio" class="form-check-input" value="posts" checked> Blog
+                                            page
+                                        </div>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" value="page">Homepage
+                                    </div>
+                                </fieldset>
                             </form>
                         </div>
                     </div>
@@ -170,16 +163,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-    <!-- cdn script -->
-    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
     <script>
         // footer year
         $('#year').text(new Date().getFullYear());
-
-
-
-        // add editor for modal
-        CKEDITOR.replace('editor1');
     </script>
 </body>
 
