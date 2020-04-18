@@ -27,10 +27,10 @@
             <div class="navbar-collapse collapse" id="navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item px-2">
-                        <a href="index.html" class="nav-link active">Home</a>
+                        <a href="index.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a href="posts.html" class="nav-link">Posts</a>
+                        <a href="posts.html" class="nav-link active">Posts</a>
                     </li>
                     <li class="nav-item px-2">
                         <a href="categories.html" class="nav-link">Categories</a>
@@ -69,7 +69,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h1>
-                        <i class="fas fa-cog"></i> Dashboard
+                        <i class="fas fa-pencil-alt"></i> Posts
                     </h1>
                 </div>
             </div>
@@ -77,155 +77,29 @@
     </header>
 
 
-    <!-- Actions -->
-    <section id="actions" class="py-4 mb-4 bg-light">
+    <!-- search -->
+    <section id="search" class="py-4 mb-4 bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
-                    <a href="#" class="btn btn-primary btn-block" data-toggle='modal' data-target="#addPostModal">
-                        <i class="fas fa-plus"></i> Add Post
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="btn btn-success btn-block" data-toggle='modal' data-target="#addCategoryModal">
-                        <i class="fas fa-plus"></i> Add Category
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="btn btn-warning btn-block" data-toggle='modal' data-target="#addUserModal">
-                        <i class="fas fa-plus"></i> Add Users
-                    </a>
+                <div class="col-md-6 ml-auto">
+                    <div class="input-group">
+                        <input type="text" placeholder="search posts" class="form-control">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary"> Search</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- add post modal -->
-    <div class="modal fade" id="addPostModal">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title">
-                        Add post
-                    </h5>
-                    <button class="close" data-dismiss="modal">
-                        <span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="title">Title</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="Category">CategorY</label>
-                            <select class="form-control">
-                                <option value="">Web develpment</option>
-                                <option value="">Tag gadgets</option>
-                                <option value="">Take business</option>
-                                <option value="">Kek</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="image">Upload image</label>
-                            <div class="custom-file">
-                                <input type="file" id="image" class="custom-file-input">
-                                <label for="image" class="custom-file-label">Choose file</label>
-                            </div>
-                            <small class="form-text text-muted">Max size 3mb</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="body">Body</label>
-                            <textarea name="editor1" class="form-control"></textarea>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">
-                        Save Changes
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- add category modal -->
-    <div class="modal fade" id="addCategoryModal">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header bg-success text-white">
-                    <h5 class="modal-title">
-                        Add category
-                    </h5>
-                    <button class="close" data-dismiss="modal">
-                        <span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="title">Title</label>
-                            <input type="text" class="form-control">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-success" data-dismiss="modal">
-                        Save Changes
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- add user modal -->
-    <div class="modal fade" id="addUserModal">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header bg-warning text-white">
-                    <h5 class="modal-title">
-                        Add user
-                    </h5>
-                    <button class="close" data-dismiss="modal">
-                        <span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="title">Name</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="title">Email</label>
-                            <input type="email" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="title">Password</label>
-                            <input type="password" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="title">Confirm Password</label>
-                            <input type="password" class="form-control">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-warning" data-dismiss="modal">
-                        Save Changes
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <!-- POSTS -->
     <section id="posts">
         <div class="container">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col">
                     <div class="card">
                         <div class="card-header">
                             <h4>Latest Posts</h4>
@@ -309,35 +183,26 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card text-center bg-primary text-white mb-3">
-                        <div class="card-body">
-                            <h3>Posts</h3>
-                            <h4 class="display-4">
-                                <i class="fas fa-pencil-alt"></i> 6
-                            </h4>
-                            <a href="posts.html" class="btn btn-outline-light btn-sm">View</a>
-                        </div>
-                    </div>
-                    <div class="card text-center bg-success text-white mb-3">
-                        <div class="card-body">
-                            <h3>Categories</h3>
-                            <h4 class="display-4">
-                                <i class="fas fa-pencil-alt"></i> 10
-                            </h4>
-                            <a href="categories.html" class="btn btn-outline-light btn-sm">View</a>
-                        </div>
-                    </div>
-                    <div class="card text-center bg-warning text-white mb-3">
-                        <div class="card-body">
-                            <h3>Users</h3>
-                            <h4 class="display-4">
-                                <i class="fas fa-pencil-alt"></i> 150
-                            </h4>
-                            <a href="users.html" class="btn btn-outline-light btn-sm">View</a>
-                        </div>
+                        <!-- pagination -->
+                        <nav class="ml-4">
+                            <ul class="pagination">
+                                <li class="page-item disabled">
+                                    <a href="#" class="page-link">Prev</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a href="#" class="page-link">1</a>
+                                </li>
+                                <li class="page-item ">
+                                    <a href="#" class="page-link">2</a>
+                                </li>
+                                <li class="page-item ">
+                                    <a href="#" class="page-link">3</a>
+                                </li>
+                                <li class="page-item ">
+                                    <a href="#" class="page-link">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -356,6 +221,7 @@
             </div>
         </div>
     </footer>
+
     <!-- Bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -366,16 +232,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-    <!-- cdn script -->
-    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
     <script>
         // footer year
         $('#year').text(new Date().getFullYear());
-
-
-
-        // add editor for modal
-        CKEDITOR.replace('editor1');
     </script>
 </body>
 
